@@ -1,6 +1,6 @@
 from mcp.server import MCPServer
 
-mcp = MCPServer("Math") ## this is server name
+mcp = MCPServer("Math") ## this is server name.
 
 @mcp.tool()
 def add(a: int, b:int)->int:
