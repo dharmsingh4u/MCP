@@ -11,5 +11,9 @@ def multiply(a: int, b:int)->int:
     """this is for multiply two numbers"""
     return a*b
 
-if __name__=='__main__':
-    mcp.run(transport='streamable-http') 
+app = mcp.streamable_http_app(
+    streamable_http_path="/mcp",
+    json_response=True,
+    stateless_http=True,
+    host="0.0.0.0",
+)
