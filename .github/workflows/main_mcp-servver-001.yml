@@ -62,5 +62,5 @@ jobs:
         id: deploy-to-webapp
         with:
           app-name: 'mcp-servver-001'
-          slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_85DC6A247AED4B28BD0F189A7961C524 }}
+          package: .
