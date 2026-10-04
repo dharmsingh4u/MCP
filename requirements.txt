@@ -2,3 +2,4 @@ mcp>=2
 fastapi
 uvicorn
 gunicorn
+python-dotenv
