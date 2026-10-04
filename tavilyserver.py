@@ -17,6 +17,13 @@ def scrape_url(url: str) -> dict:
     """this is for scraping the content of a web page"""
     return tavily.extract(urls=[url], format="markdown")
 
-if __name__=='__main__':
-    #mcp.run(transport='streamable-http', host='0.0.0.0', port=int(os.getenv("PORT", 8000)))
-    mcp.run(transport='stdio') 
+# if __name__=='__main__':
+#     #mcp.run(transport='streamable-http', host='0.0.0.0', port=int(os.getenv("PORT", 8000)))
+#     mcp.run(transport='stdio')
+
+app = mcp.streamable_http_app(
+    streamable_http_path="/mcp",
+    json_response=True,
+    stateless_http=True,
+    host="0.0.0.0",
+)
